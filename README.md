@@ -16,6 +16,24 @@ It has the following features:
 The [manual](http://homepages.thm.de/~hg11260/mat/ebc.pdf) is available
 from the projects [homepage](https://esb-dev.github.io/ebc.html).
 
+## How to run eBC 
+### Prerequisites 
+- Install Java, Maven, Clojure and Leiningen. 
+- Download the files or clone from git.
+
+### Build 
+- Run ``leiningen install`` within the root directory ``eBC/`` to download the needed dependencies
+- (Run ``leiningen uberjar`` instead of ``leiningen jar`` to create executable ``ebc.jar``) 
+
+### Start eBC 
+- Without running ``leiningen uberjar`` you can run ``leiningen run`` to start the eBC from clojure sources
+- After ``leiningen uberjar`` command you can execute the jar from the target folder with ``java -jar target/ebc.jar`` 
+
+### Make MacOS Application
+- The executable __makeapp__ within the ``ebc/`` directory creates installable .dmg bundle
+- Run ``./makeapp`` to create the .dmg bundle in ``target/bundles/``
+- Open the created ``./eBC-1.0.dmg`` and move __eBC.app__ to your Application directory 
+
 ## License
 
 eBC is licensed under the Eclipse Public License (EPL). It uses libraries 
